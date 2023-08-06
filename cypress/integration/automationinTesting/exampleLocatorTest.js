@@ -14,7 +14,13 @@ context('Проверка элементов на странице', function ()
 
 
     //добавить тест на посещение страницы
+    it('visitPage', () => {
+        cy.visit('/')
+    })
 
+    it('TextTest', () => {
+        cy.get('h1').should('have.text','Welcome to Restful Booker Platform')
+    })
 
     //Тестовый пример для демонстрации определения локаторов различными способами
     it('typesOfLocators', () => {
